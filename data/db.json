@@ -1,0 +1,95 @@
+{
+  "contact":[
+    {
+      "id": "1",
+      "name": "John",
+      "lastname": "Doe",
+      "twitter_username": "@johndoe",
+      "avatar_url": "https://example.com/avatars/johndoe.jpg",
+      "favorite": true,
+      "note": "Met at the conference."
+    },
+    {
+      "id": "2",
+      "name": "Jane",
+      "lastname": "Smith",
+      "twitter_username": "@janesmith",
+      "avatar_url": "https://example.com/avatars/janesmith.jpg",
+      "favorite": false,
+      "note": "Works in marketing."
+    },
+    {
+      "id": "3",
+      "name": "Emily",
+      "lastname": "Johnson",
+      "twitter_username": "@emilyjohnson",
+      "avatar_url": "https://example.com/avatars/emilyjohnson.jpg",
+      "favorite": true,
+      "note": "Friend from college."
+    },
+    {
+      "id": "4",
+      "name": "Michael",
+      "lastname": "Brown",
+      "twitter_username": "@michaelbrown",
+      "avatar_url": "https://example.com/avatars/michaelbrown.jpg",
+      "favorite": false,
+      "note": "Project collaborator."
+    },
+    {
+      "id": "5",
+      "name": "Sarah",
+      "lastname": "Williams",
+      "twitter_username": "@sarahwilliams",
+      "avatar_url": "https://example.com/avatars/sarahwilliams.jpg",
+      "favorite": true,
+      "note": "Neighbor."
+    },
+    {
+      "id": "6",
+      "name": "David",
+      "lastname": "Jones",
+      "twitter_username": "@davidjones",
+      "avatar_url": "https://example.com/avatars/davidjones.jpg",
+      "favorite": false,
+      "note": "Gym buddy."
+    },
+    {
+      "id": "7",
+      "name": "Laura",
+      "lastname": "Garcia",
+      "twitter_username": "@lauragarcia",
+      "avatar_url": "https://example.com/avatars/lauragarcia.jpg",
+      "favorite": true,
+      "note": "Works in HR."
+    },
+    {
+      "id": "8",
+      "name": "Robert",
+      "lastname": "Martinez",
+      "twitter_username": "@robertmartinez",
+      "avatar_url": "https://example.com/avatars/robertmartinez.jpg",
+      "favorite": false,
+      "note": "Old school friend."
+    },
+    {
+      "id": "9",
+      "name": "Linda",
+      "lastname": "Lee",
+      "twitter_username": "@lindalee",
+      "avatar_url": "https://example.com/avatars/lindalee.jpg",
+      "favorite": true,
+      "note": "Yoga instructor."
+    },
+    {
+      "id": "10",
+      "name": "James",
+      "lastname": "Taylor",
+      "twitter_username": "@jamestaylor",
+      "avatar_url": "https://example.com/avatars/jamestaylor.jpg",
+      "favorite": false,
+      "note": "Former colleague."
+    }
+  ]
+
+}
