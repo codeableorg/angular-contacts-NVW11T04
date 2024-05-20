@@ -1,0 +1,82 @@
+<form
+  #contactForm="ngForm"
+  id="contact-form"
+  (ngSubmit)="onSubmit(contactForm)"
+>
+  <div class="row">
+    <span class="field-name">Name</span>
+    <div class="fullname__inputs">
+      <div class="input-container">
+        <input
+          placeholder="First"
+          name="name"
+          [(ngModel)]="formContactData.name"
+          required
+          [maxlength]="15"
+          #nameCtrl="ngModel"
+        />
+        <div *ngIf="nameCtrl.invalid && (nameCtrl.dirty || nameCtrl.touched)">
+          <small class="error" *ngIf="nameCtrl.hasError('required')">
+            El nombre es obligatorio.
+          </small>
+        </div>
+      </div>
+      <div class="input-container">
+        <input
+          placeholder="Last"
+          name="lastname"
+          [(ngModel)]="formContactData.lastname"
+          required
+          [maxlength]="15"
+          #lastnameCtrl="ngModel"
+        />
+        <div
+          *ngIf="
+            lastnameCtrl.invalid && (lastnameCtrl.dirty || lastnameCtrl.touched)
+          "
+        >
+          <small class="error" *ngIf="lastnameCtrl.hasError('required')">
+            El apellido es obligatorio.
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <label class="row">
+    <span class="field-name">Twitter</span>
+    <div class="input-container">
+      <input
+        placeholder="@jack"
+        name="twitter_username"
+        [(ngModel)]="formContactData.twitter_username"
+        usernameValidator
+        #twitterCtrl="ngModel"
+      />
+      <div
+        *ngIf="twitterCtrl.invalid && twitterCtrl.dirty && twitterCtrl.touched"
+      >
+        <small class="error" *ngIf="twitterCtrl.hasError('invalidUsername')">{{ twitterCtrl.errors?.['invalidUsername'] }}</small>
+      </div>
+    </div>
+  </label>
+  <label class="row">
+    <span class="field-name">Avatar URL</span>
+    <input
+      name="avatar_url"
+      placeholder="https://example.com/avatar.jpg"
+      [(ngModel)]="formContactData.avatar_url"
+    />
+  </label>
+  <label class="row">
+    <span class="field-name">Notes</span>
+    <textarea name="notes" [(ngModel)]="formContactData.note"> </textarea>
+  </label>
+  <div class="form-actions">
+    <button [disabled]="contactForm.invalid" type="submit">
+      {{ submitText }}
+    </button>
+    <button (click)="handleCancel()" class="cancel-button" type="button">
+      Cancel
+    </button>
+  </div>
+</form>
