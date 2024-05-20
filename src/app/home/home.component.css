@@ -1,0 +1,29 @@
+#template {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+#sidebar {
+  width: 22rem;
+  background-color: #f7f7f7;
+  border-right: solid 1px #e3e3e3;
+}
+
+app-search-contact {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#detail {
+  flex: 1;
+  padding: 2rem 4rem;
+  width: 100%;
+}
+
+img.home-app-icon {
+  margin: 0 auto;
+  display: block;
+  width: 250px;
+}

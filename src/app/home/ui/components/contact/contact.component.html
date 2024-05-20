@@ -1,0 +1,42 @@
+<div id="contact">
+    @if (!contact) {
+        <div>
+            <img class="bg-none" src="/assets/contact-not-found.png" alt="contact-not-found">
+        </div>
+        <div>
+            <p>Oops! No contact found.</p>
+            <button class="edit-btn" [routerLink]="['/contact','create']">Add a new contact</button>
+        </div>
+    } @else {
+        <div>
+            <img [src]="contact.avatar_url || '/assets/default-avatar.png'"
+            alt="{{contact.name}}-{{contact.lastname}}">
+        </div>
+        <div>
+            <h1>
+                {{contact.name}} {{contact.lastname}}
+                <div class="form">
+                    <button class="star-btn"
+                        [ngClass]="{starred: contact.favorite}"
+                        (click)="handleFavorite()">
+                        {{contact.favorite ? '★' : '☆'}}
+                    </button>
+                </div>
+            </h1>
+            <p>
+                <a class="twitter-link"
+                    href="https://x.com/{{contact.twitter_username}}"
+                    target="_blank">
+                    &#64;{{contact.twitter_username}}
+                </a>
+            </p>
+            @if (contact.note){
+                <p>{{contact.note}}</p>
+            }
+            <div>
+                <button [routerLink]="['/contact', contact.id, 'edit']"  class="edit-btn">Edit</button>
+                <button class="delete-btn" (click)="handleDelete()">Delete</button>
+            </div>
+        </div>
+    }
+</div>
